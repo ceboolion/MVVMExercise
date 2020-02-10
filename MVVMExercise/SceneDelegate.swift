@@ -15,6 +15,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     guard let windowScene = (scene as? UIWindowScene) else { return }
     window = UIWindow(windowScene: windowScene)
     let vc = RootViewController()
+    let user = User(name: "BatMan", age: 30, backgroundColor: .white)
+    let rootViewModel = RootViewModel(user: user)
+    vc.viewModel = rootViewModel
     let navigationConttoller = UINavigationController(rootViewController: vc)
     window?.rootViewController = navigationConttoller
     window?.makeKeyAndVisible()

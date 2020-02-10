@@ -30,12 +30,10 @@ class RootViewController: UIViewController {
     super.viewDidLoad()
     setupViews()
     setupNavigation()
-    let user = User(name: "Roman", age: 39, backgroundColor: .white)
-    viewModel = RootViewModel(user: user)
+    viewModel.rootViewModelDelegate = self
   }
   
   fileprivate func setupNavigation(){
-//    navigationItem.title = "Roman, 39"
     let resetBarButtonItem = UIBarButtonItem(title: "Reset", style: .plain, target: self, action: #selector(resetBarButtonTapped))
     let fetchBarButtonItem = UIBarButtonItem(title: "Fetch", style: .done, target: self, action: #selector(fetchBarButtonTapped))
     
@@ -48,7 +46,7 @@ class RootViewController: UIViewController {
   }
 
   @objc fileprivate func fetchBarButtonTapped() {
-    
+    viewModel.fetchMessage()
   }
   
   private func setupViews() {
@@ -60,10 +58,20 @@ class RootViewController: UIViewController {
       make.center.equalToSuperview()
     }
     activityIndicator.snp.makeConstraints { (make) in
-      make.top.equalTo(label).offset(5)
+      make.top.equalTo(label).offset(25)
       make.centerX.equalToSuperview()
     }
   }
+}
 
+extension RootViewController: RootViewModelDelegate {
+  func didStartFetchingMessage(_ message: String?) {
+    label.text = message
+    activityIndicator.startAnimating()
+  }
+  func didFinishFetchingMessage(_ message: String?) {
+    label.text = message
+    activityIndicator.stopAnimating()
+  }
 }
 

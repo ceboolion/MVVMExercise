@@ -14,6 +14,7 @@
 		C8FF699D23F124100062899B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8FF699C23F124100062899B /* Assets.xcassets */; };
 		C8FF69A823F1422C0062899B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FF69A723F1422C0062899B /* User.swift */; };
 		C8FF69AA23F143A70062899B /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FF69A923F143A70062899B /* RootViewModel.swift */; };
+		C8FF69AC23F17C8B0062899B /* DispatchQueueHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FF69AB23F17C8B0062899B /* DispatchQueueHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C8FF69A123F124100062899B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8FF69A723F1422C0062899B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C8FF69A923F143A70062899B /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		C8FF69AB23F17C8B0062899B /* DispatchQueueHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				C8FF699523F124070062899B /* SceneDelegate.swift */,
 				C8FF699723F124070062899B /* RootViewController.swift */,
 				C8FF69A923F143A70062899B /* RootViewModel.swift */,
+				C8FF69AB23F17C8B0062899B /* DispatchQueueHelper.swift */,
 				C8FF69A723F1422C0062899B /* User.swift */,
 				C8FF699C23F124100062899B /* Assets.xcassets */,
 				C8FF69A123F124100062899B /* Info.plist */,
@@ -207,6 +210,7 @@
 				C8FF69AA23F143A70062899B /* RootViewModel.swift in Sources */,
 				C8FF69A823F1422C0062899B /* User.swift in Sources */,
 				C8FF699823F124070062899B /* RootViewController.swift in Sources */,
+				C8FF69AC23F17C8B0062899B /* DispatchQueueHelper.swift in Sources */,
 				C8FF699423F124070062899B /* AppDelegate.swift in Sources */,
 				C8FF699623F124070062899B /* SceneDelegate.swift in Sources */,
 			);
